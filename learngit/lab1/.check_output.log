@@ -1,0 +1,113 @@
+(THU.CST) os is loading ...
+
+Special kernel symbols:
+  entry  0x00100000 (phys)
+  etext  0x00103600 (phys)
+  edata  0x0010ea16 (phys)
+  end    0x0010fda0 (phys)
+Kernel executable memory footprint: 64KB
+ebps:0x00007b28 eips:0x00100a74arguments:0x0d620000, 0x00940010, 0x00940001, 0x7b580001
+    kern/debug/kdebug.c:306: print_stackframe+22
+ebps:0x00007b38 eips:0x00100d62arguments:0x00970000, 0x00000010, 0x00000000, 0x00000000
+    kern/debug/kmonitor.c:125: mon_backtrace+10
+ebps:0x00007b58 eips:0x00100097arguments:0x00c10000, 0x00000010, 0x7b800000, 0x00000000
+    kern/init/init.c:48: grade_backtrace2+33
+ebps:0x00007b78 eips:0x001000c1arguments:0x00e00000, 0x00000010, 0x00000000, 0x7ba4ffff
+    kern/init/init.c:53: grade_backtrace1+38
+ebps:0x00007b98 eips:0x001000e0arguments:0x01060000, 0x00000010, 0x00000000, 0x00000010
+    kern/init/init.c:58: grade_backtrace0+23
+ebps:0x00007bb8 eips:0x00100106arguments:0x00550000, 0x361c0010, 0x36000010, 0x138a0010
+    kern/init/init.c:63: grade_backtrace+34
+ebps:0x00007be8 eips:0x00100055arguments:0x7d720000, 0x00000000, 0x00000000, 0x00000000
+    kern/init/init.c:28: kern_init+84
+ebps:0x00007bf8 eips:0x00007d72arguments:0x7c4f0000, 0xfcfa0000, 0xd88ec031, 0xd08ec08e
+    <unknow>: -- 0x00007d71 --
+ebps:0x00000000 eips:0x00007c4farguments:0xff53f000, 0xe2c3f000, 0xff53f000, 0xff53f000
+    <unknow>: -- 0x00007c4e --
+ebps:0xf000ff53 eips:0xf000ff53arguments:0x00000000, 0x00000000, 0x00000000, 0x00000000
+    <unknow>: -- 0xf000ff52 --
+ebps:0x00000000 eips:0x00000000arguments:0xff53f000, 0xe2c3f000, 0xff53f000, 0xff53f000
+    <unknow>: -- 0xffffffff --
+ebps:0xf000ff53 eips:0xf000ff53arguments:0x00000000, 0x00000000, 0x00000000, 0x00000000
+    <unknow>: -- 0xf000ff52 --
+ebps:0x00000000 eips:0x00000000arguments:0xff53f000, 0xe2c3f000, 0xff53f000, 0xff53f000
+    <unknow>: -- 0xffffffff --
+ebps:0xf000ff53 eips:0xf000ff53arguments:0x00000000, 0x00000000, 0x00000000, 0x00000000
+    <unknow>: -- 0xf000ff52 --
+ebps:0x00000000 eips:0x00000000arguments:0xff53f000, 0xe2c3f000, 0xff53f000, 0xff53f000
+    <unknow>: -- 0xffffffff --
+ebps:0xf000ff53 eips:0xf000ff53arguments:0x00000000, 0x00000000, 0x00000000, 0x00000000
+    <unknow>: -- 0xf000ff52 --
+ebps:0x00000000 eips:0x00000000arguments:0xff53f000, 0xe2c3f000, 0xff53f000, 0xff53f000
+    <unknow>: -- 0xffffffff --
+ebps:0xf000ff53 eips:0xf000ff53arguments:0x00000000, 0x00000000, 0x00000000, 0x00000000
+    <unknow>: -- 0xf000ff52 --
+ebps:0x00000000 eips:0x00000000arguments:0xff53f000, 0xe2c3f000, 0xff53f000, 0xff53f000
+    <unknow>: -- 0xffffffff --
+ebps:0xf000ff53 eips:0xf000ff53arguments:0x00000000, 0x00000000, 0x00000000, 0x00000000
+    <unknow>: -- 0xf000ff52 --
+++ setup timer interrupts
+0: @ring 0
+0:  cs = 8
+0:  ds = 10
+0:  es = 10
+0:  ss = 10
++++ switch to  user  mode +++
+1: @ring 3
+1:  cs = 1b
+1:  ds = 23
+1:  es = 23
+1:  ss = 23
++++ switch to kernel mode +++
+2: @ring 0
+2:  cs = 8
+2:  ds = 10
+2:  es = 10
+2:  ss = 10
+100 ticks
+End of Test.
+kernel panic at kern/trap/trap.c:18:
+    EOT: kernel seems ok.
+stack trackback:
+ebps:0x00007ac0 eips:0x00100a74arguments:0x042b0000, 0x36c80010, 0x7b040010, 0x00120000
+    kern/debug/kdebug.c:306: print_stackframe+22
+ebps:0x00007af0 eips:0x0010042barguments:0x18510000, 0x39ae0010, 0x00120010, 0x39980000
+    kern/debug/panic.c:27: __panic+103
+ebps:0x00007b10 eips:0x00101851arguments:0x1d040000, 0x36670010, 0x7b7c0010, 0x7b400000
+    kern/trap/trap.c:0: print_ticks+65
+ebps:0x00007b50 eips:0x00101d04arguments:0x1f150000, 0x7b7c0010, 0x000c0000, 0xfd740000
+    kern/trap/trap.c:164: trap_dispatch+145
+ebps:0x00007b70 eips:0x00101f15arguments:0x29a00000, 0x7b7c0010, 0x00000000, 0x00940000
+    kern/trap/trap.c:223: trap+16
+ebps:0x00007be8 eips:0x001029a0arguments:0x7d720000, 0x00000000, 0x00000000, 0x00000000
+    kern/trap/trapentry.S:24: <unknown>+0
+ebps:0x00007bf8 eips:0x00007d72arguments:0x7c4f0000, 0xfcfa0000, 0xd88ec031, 0xd08ec08e
+    <unknow>: -- 0x00007d71 --
+ebps:0x00000000 eips:0x00007c4farguments:0xff53f000, 0xe2c3f000, 0xff53f000, 0xff53f000
+    <unknow>: -- 0x00007c4e --
+ebps:0xf000ff53 eips:0xf000ff53arguments:0x00000000, 0x00000000, 0x00000000, 0x00000000
+    <unknow>: -- 0xf000ff52 --
+ebps:0x00000000 eips:0x00000000arguments:0xff53f000, 0xe2c3f000, 0xff53f000, 0xff53f000
+    <unknow>: -- 0xffffffff --
+ebps:0xf000ff53 eips:0xf000ff53arguments:0x00000000, 0x00000000, 0x00000000, 0x00000000
+    <unknow>: -- 0xf000ff52 --
+ebps:0x00000000 eips:0x00000000arguments:0xff53f000, 0xe2c3f000, 0xff53f000, 0xff53f000
+    <unknow>: -- 0xffffffff --
+ebps:0xf000ff53 eips:0xf000ff53arguments:0x00000000, 0x00000000, 0x00000000, 0x00000000
+    <unknow>: -- 0xf000ff52 --
+ebps:0x00000000 eips:0x00000000arguments:0xff53f000, 0xe2c3f000, 0xff53f000, 0xff53f000
+    <unknow>: -- 0xffffffff --
+ebps:0xf000ff53 eips:0xf000ff53arguments:0x00000000, 0x00000000, 0x00000000, 0x00000000
+    <unknow>: -- 0xf000ff52 --
+ebps:0x00000000 eips:0x00000000arguments:0xff53f000, 0xe2c3f000, 0xff53f000, 0xff53f000
+    <unknow>: -- 0xffffffff --
+ebps:0xf000ff53 eips:0xf000ff53arguments:0x00000000, 0x00000000, 0x00000000, 0x00000000
+    <unknow>: -- 0xf000ff52 --
+ebps:0x00000000 eips:0x00000000arguments:0xff53f000, 0xe2c3f000, 0xff53f000, 0xff53f000
+    <unknow>: -- 0xffffffff --
+ebps:0xf000ff53 eips:0xf000ff53arguments:0x00000000, 0x00000000, 0x00000000, 0x00000000
+    <unknow>: -- 0xf000ff52 --
+ebps:0x00000000 eips:0x00000000arguments:0xff53f000, 0xe2c3f000, 0xff53f000, 0xff53f000
+    <unknow>: -- 0xffffffff --
+Welcome to the kernel debug monitor!!
+Type 'help' for a list of commands.
